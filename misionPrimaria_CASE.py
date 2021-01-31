@@ -9,7 +9,7 @@ def main():
 
 	while True:
 		sensor.writeLogLine()
-		packet = bytes(sensor.line())
+		packet = bytes(sensor.line(), "utf-8")
 		radio.rfm69.send(packet)
 		time.sleep(1)
 
