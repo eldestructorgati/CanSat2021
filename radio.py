@@ -13,9 +13,11 @@ import adafruit_ssd1306
 import adafruit_rfm69
 
 display = None
+rfm69 = None
 
 def init():
 	global display
+	global rfm69
 
 	# I2C
 	i2c = busio.I2C(board.SCL, board.SDA)
