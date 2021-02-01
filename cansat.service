@@ -1,0 +1,14 @@
+[Unit]
+Description= CanSat
+After=network.target
+
+[Service]
+ExecStart=/home/pi/CanSat2021/runCanSat.sh > /home/pi/CanSat2021/cansat.log 2>&1
+WorkingDirectory=/home/pi/CanSat2021
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
