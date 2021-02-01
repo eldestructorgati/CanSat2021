@@ -10,4 +10,9 @@ Para el arranque automático:
     sudo systemctl enable cansat.service
     sudo reboot
 
-  (Más información y opciones de arranque automático: https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/)
+Para parar o empezar el proceso una vez encendida:
+
+    sudo service cansat stop
+    sudo service cansat start
+    
+(Más información y opciones de arranque automático: https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/)
