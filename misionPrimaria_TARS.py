@@ -25,7 +25,7 @@ def main():
 			temperature = float(fields[1])
 			humedad = float(fields[2])
 			presion = float(fields[3])
-			altitud = float(fields[4])
+			altitud = (-1)*float(fields[4])
 			outputLog.write("%f %f %f %f %f\n" % (timeStamp, temperature, humedad, presion, altitud))
 			print("\nTime: %0.2f s" % (timeStamp - startTime))
 			print("Temperature: %0.1f C" % temperature)
