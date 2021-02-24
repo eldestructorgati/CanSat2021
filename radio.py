@@ -10,7 +10,7 @@ import board
 # Pantalla OLED
 import adafruit_ssd1306
 # Modulo radio
-import adafruit_rfm69
+__repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_RFM69.git"
 
 display = None
 rfm69 = None
