@@ -11,7 +11,7 @@ def main():
 		sensor.writeLogLine()
 		packet = bytes(sensor.line(), "utf-8")
 		radio.rfm69.send(packet)
-		time.sleep(1)
+		time.sleep(0.5)
 
 	radio.close()
 	sensor.close()

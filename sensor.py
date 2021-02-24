@@ -1,6 +1,7 @@
 # .init (inicializar)
 # .line (datos)
 # .writeLogLine (escribir datos a fichero)
+# .altitud (altitud)
 
 import time
 import board
@@ -16,8 +17,11 @@ def init():
 
 	i2c = busio.I2C(board.SCL, board.SDA)
 	bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
-	bme280.sea_level_pressure = 1013.4 #Cambiar nivel mar
+	bme280.sea_level_pressure = 1013.25
 	outputLog = open ('data.txt', 'a')
+
+def altitud():
+	return bme280.altitude
 
 def line():
         return "%f %f %f %f %f\n" % (time.time(), bme280.temperature, bme280.humidity, bme280.pressure, bme280.altitude)
