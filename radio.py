@@ -9,6 +9,7 @@ from digitalio import DigitalInOut, Direction, Pull
 import board
 # Pantalla OLED
 import adafruit_ssd1306
+import adafruitrfm69
 # Modulo radio
 __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_RFM69.git"
 
